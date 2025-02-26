@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Listar Vuelos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Avion</th>
+            <th>Capacidad</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for flight in flights %}
+        <tr>
+            <td>{{ flight.id }}</td>
+            <td>{{ flight.name }}</td>
+            <td>{{ flight.type }}</td>
+            <td>{{ flight.price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    {% endblock %}

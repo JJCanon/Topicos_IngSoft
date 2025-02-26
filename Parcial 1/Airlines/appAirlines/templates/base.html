@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>Airlines</h1>
+            <nav>
+                {% block nav %}
+                <a href="{% url 'createFlight' %}">Registrar Vuelos</a>
+                <a href="{% url 'listFlights' %}">Listar Vuelos</a>
+                <a href>Estadisticas de vuelos</a>
+                {% endblock %}
+            </nav>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+        <footer>
+            <p>Airlines</p>
+        </footer>
+    </body>
+</html>
